@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { APPROUTING } from './app.routers';
+import { APPROUTING } from './app.routes';
 
 
 import { AppComponent } from './app.component';
