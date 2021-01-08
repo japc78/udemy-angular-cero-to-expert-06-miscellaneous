@@ -1,0 +1,28 @@
+<div>
+    <h3>ngSwitch - Múltiples opciones con una sola decisión</h3>
+    <div [ngSwitch]="msgAlert" class="mb-3">
+        <div *ngSwitchCase="'success'">success</div>
+        <div *ngSwitchCase="'info'">info</div>
+        <div *ngSwitchCase="'warning'">warning</div>
+        <div *ngSwitchDefault>Danger</div>
+    </div>
+
+    <button type="button" class="btn btn-primary mb-3" (click)="msgAlert='warning'">
+      Change
+    </button>
+
+    <div [ngSwitch]="msgAlert">
+      <div *ngSwitchCase="'info'" class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+      </div>
+      <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+      </div>
+      <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+      </div>
+      <div *ngSwitchDefault class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+      </div>
+    </div>
+</div>

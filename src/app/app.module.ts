@@ -6,6 +6,7 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { CssComponent } from './components/css/css.component';
 import { ClassComponent } from './components/class/class.component';
 import { HighlightedDirective } from './directives/highlighted.directive';
+import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HighlightedDirective } from './directives/highlighted.directive';
     NgStyleComponent,
     CssComponent,
     ClassComponent,
-    HighlightedDirective
+    HighlightedDirective,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule
