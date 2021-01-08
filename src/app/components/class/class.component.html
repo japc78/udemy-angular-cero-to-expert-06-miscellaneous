@@ -1,0 +1,20 @@
+<h3>ngClass - Agregando clases de estilos a nuestros
+    elementos HTML</h3>
+<div [ngClass]="msgAlert" class="alert" role="alert">
+    A simple primary alert—check it out!
+</div>
+
+<div>
+<button type="button" class="btn btn-outline-primary mr-2" (click)="msgAlert = 'alert-info'">info</button>
+<button type="button" class="btn btn-outline-success mr-2" (click)="msgAlert = 'alert-success'">success</button>
+</div>
+<br>
+<p [ngClass]="{'text-danger': properties.danger, 'text-info': !properties.danger}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quo quam amet! Delectus ex ipsum optio dolor ratione deleniti temporibus, nostrum eligendi suscipit reiciendis perspiciatis quae quaerat ea tenetur consectetur?</p>
+<button type="button" class="btn btn-outline-secondary mr-2" (click)="changeProperty()">change</button>
+
+
+
+
+
+
+
