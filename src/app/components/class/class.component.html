@@ -9,10 +9,19 @@
 <button type="button" class="btn btn-outline-success mr-2" (click)="msgAlert = 'alert-success'">success</button>
 </div>
 <br>
-<p [ngClass]="{'text-danger': properties.danger, 'text-info': !properties.danger}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quo quam amet! Delectus ex ipsum optio dolor ratione deleniti temporibus, nostrum eligendi suscipit reiciendis perspiciatis quae quaerat ea tenetur consectetur?</p>
-<button type="button" class="btn btn-outline-secondary mr-2" (click)="changeProperty()">change</button>
-
-
+<div>
+    <p [ngClass]="{'text-danger': properties.danger, 'text-info': !properties.danger}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quo quam amet! Delectus ex ipsum optio dolor ratione deleniti temporibus, nostrum eligendi suscipit reiciendis perspiciatis quae quaerat ea tenetur consectetur?</p>
+    <button type="button" class="btn btn-outline-secondary mr-2" (click)="changeProperty()">change</button>
+</div>
+<br><br>
+<div>
+    <h4>Proceso asincrono</h4>
+    <button type="button" class="btn btn-outline-primary mr-2" (click)="saveChanges()" [disabled]="loading">
+        <i [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin': loading}" class="fa" aria-hidden="true"></i>
+        <span *ngIf="!loading"> save changes</span>
+        <span *ngIf="loading"> wait please...</span>
+    </button>
+</div>
 
 
 

@@ -13,6 +13,8 @@ export class ClassComponent implements OnInit {
     danger: true
   }
 
+  loading = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,6 +22,13 @@ export class ClassComponent implements OnInit {
 
   changeProperty() {
     this.properties.danger = !this.properties.danger;
+  }
+
+  saveChanges() {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
   }
 
 }
